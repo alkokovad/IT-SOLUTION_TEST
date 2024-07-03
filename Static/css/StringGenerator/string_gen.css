@@ -1,0 +1,108 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,400;6..12,500;6..12,700;6..12,900&display=swap");
+
+body {
+    background-color: #333333;
+    color: #DDDDDD;
+    font: 700 16px "Nunito Sans", sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+form {
+    width: 100vw;
+    margin: 64px 0;
+}
+
+form h2 {
+    margin: 0 auto;
+    width: fit-content;
+}
+
+form div {
+    margin: 16px auto 0 auto;
+    width: fit-content;
+    display: flex;
+    gap: 4px;
+}
+
+form div .looped_text {
+    font: 700 16px "Nunito Sans", sans-serif;
+    color: black;
+    background-color: white;
+    width: 192px;
+    height: 32px;
+    border-radius: 16px;
+    border: none;
+    padding: 0 8px;
+}
+
+form div .load {
+    font: 700 16px "Nunito Sans", sans-serif;
+    color: black;
+    background-color: white;
+    width: 32px;
+    height: 32px;
+    border-radius: 16px;
+    border: none;
+    padding: 0;
+}
+
+.new_vid_block {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    justify-content: center;
+}
+
+.vid_btns {
+    margin: auto;
+    width: fit-content;
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+}
+
+.new_vid_block a {
+    margin: auto;
+    background: none;
+    border: none;
+}
+
+.new_vid_block button {
+    margin: auto;
+    background: none;
+    border: none;
+}
+
+a svg {
+    fill: white;
+}
+
+button svg {
+    fill: white;
+}
+
+.new_vid {
+    margin: 0 auto;
+    background-color: white;
+    border: white 2px solid;
+    border-radius: 16px;
+    height: fit-content;
+    max-height: 200px;
+    width: fit-content;
+    max-width: 400px;
+}
+
+.uploaded_vids {
+    margin: 64px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    row-gap: 16px;
+}
+
+.vid_block {
+    display: block;
+}
