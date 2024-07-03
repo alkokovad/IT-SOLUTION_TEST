@@ -63,6 +63,17 @@ form div .load {
     gap: 8px;
 }
 
+.vid_btns form {
+    width: fit-content;
+    padding: 0;
+    margin: 0;
+}
+
+.vid_btns form button {
+    background: none;
+    border: none;
+}
+
 .new_vid_block a {
     margin: auto;
     background: none;

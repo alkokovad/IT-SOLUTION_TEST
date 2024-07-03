@@ -35,12 +35,13 @@ class StringGeneratorView(View):
     template_name = 'StringGenerator/string_gen.html'
 
     def get(self, request):
-        if request.POST.get('std'):
-            Strings.objects.filter(name=request.POST.get('std')).delete()
+        print(request.GET)
+        if request.GET.get('std'):
+            Strings.objects.filter(name=request.GET.get('std')).delete()
         context = {}
         videos = Strings.objects.all()
         if videos:
-            context = {"videos": videos[:len(videos) - 1]}
+            context = {"videos": videos}
         return render(request, self.template_name, context)
 
     def post(self, request):
