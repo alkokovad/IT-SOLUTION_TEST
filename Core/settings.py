@@ -77,6 +77,7 @@ DATABASES = {
         'USER': 'alkokovad',
         'PASSWORD': 'Saint-String',
         'HOST': 'pgdb',
+        # 'HOST': '172.17.0.1', для деплоя
         'PORT': '5432'
     }
 }
