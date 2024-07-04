@@ -60,4 +60,11 @@
 </div>
 {% endif %}
 </body>
+<script>
+    document.querySelector('input[type="text"]').addEventListener('keypress', function(e) {
+  if (/["/", ".", ",", "?", "&"]/.test(e.key)) {
+    e.preventDefault();
+  }
+});
+</script>
 </html>

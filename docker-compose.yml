@@ -1,0 +1,32 @@
+version: '3'
+
+services:
+  django:
+    build: .
+    container_name: django
+    command: bash -c "python manage.py makemigrations && python manage.py migrate && python manage.py runserver 0.0.0.0:8003"
+    volumes:
+      - .:/usr/src/app
+    ports:
+      - 8003:8003
+    depends_on:
+      - pgdb
+
+  pgdb:
+    image: postgres
+    restart: always
+    environment:
+      - POSTGRES_DB=postgres
+      - POSTGRES_USER=alkokovad
+      - POSTGRES_PASSWORD=Saint-String
+    container_name: pgdb
+    volumes:
+      - pgdbdata:/var/lib/postgresql/data/
+
+  adminer:
+    image: adminer
+    restart: always
+    ports:
+      - 8081:8081
+volumes:
+  pgdbdata: null

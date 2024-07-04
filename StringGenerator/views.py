@@ -1,3 +1,5 @@
+import os
+
 import cv2
 import numpy as np
 from django.shortcuts import render
@@ -35,9 +37,9 @@ class StringGeneratorView(View):
     template_name = 'StringGenerator/string_gen.html'
 
     def get(self, request):
-        print(request.GET)
         if request.GET.get('std'):
             Strings.objects.filter(name=request.GET.get('std')).delete()
+            os.remove(request.GET.get('std'))
         context = {}
         videos = Strings.objects.all()
         if videos:

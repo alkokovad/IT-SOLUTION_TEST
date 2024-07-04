@@ -33,6 +33,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'StringGenerator.apps.StringgeneratorConfig',
+    'django.contrib.postgres',
 ]
 
 MIDDLEWARE = [
@@ -75,7 +76,7 @@ DATABASES = {
         'NAME': 'postgres',
         'USER': 'alkokovad',
         'PASSWORD': 'Saint-String',
-        'HOST': '0.0.0.0',
+        'HOST': 'pgdb',
         'PORT': '5432'
     }
 }
